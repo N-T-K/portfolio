@@ -1,0 +1,295 @@
+<html>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Spacing between rows */
+.row + .row { margin-top: 40px; }
+
+/* For mobile phones: */
+[class*="col-"] {
+    width: 100%;
+}
+
+.col-prof-pic { margin:auto; }
+.col-proj-pic { display:none; }
+
+.container {
+    width:max-width;
+    padding:15px;
+}
+
+ul {
+    list-style: none;
+    margin-left: 0px;
+    padding-left: 15px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    columns: 1;
+    -webkit-columns: 1;
+    -moz-columns: 1;
+}
+
+@media only screen and (min-width: 500px) {
+    /* For desktop: */
+    .container {
+        max-width:800px;
+        margin:auto;
+    }
+    .col-bio {max-width: 65%;}
+    .col-prof-pic {float:right; margin-left:20px;}
+    .col-proj-pic {max-width: 25%; float:left; display:inline; padding-right: 20px; }
+    .col-proj-desc {max-width: 75%; float:left;}
+}
+
+@media only screen and (min-width: 800px) {
+    /* For desktop: */
+    ul {
+        columns: 2;
+        -webkit-columns: 2;
+        -moz-columns: 2;
+    }
+}
+
+
+a {
+    color: #1772d0;
+    text-decoration:none;
+}
+
+a:focus, a:hover {
+    color: #f09228;
+    text-decoration:none;
+}
+
+body,td,th,tr,p,a {
+    font-family: 'Lato', Verdana, Helvetica, sans-serif;
+    font-size: 14px;
+    line-height:130%;
+}
+
+strong {
+    font-family: 'Lato', Verdana, Helvetica, sans-serif;
+    font-size: 15px;
+	font-weight: 700;
+}
+
+heading {
+    font-family: 'Lato', Verdana, Helvetica, sans-serif;
+    font-size: 22px;
+}
+
+papertitle {
+    font-family: 'Lato', Verdana, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+name {
+    font-family: 'Lato', Verdana, Helvetica, sans-serif;
+    font-size: 40px;
+}
+
+.col-proj-pic img {
+    max-width: 100%;
+}
+
+.cropcircle {
+	border-radius: 100%;
+    background: #eee no-repeat center;
+    background-size: cover;
+}
+
+#profile-img{
+    height: 250px;
+    width: 250px;
+    background-image: url(profile_picture.jpeg);
+}
+
+span.highlight {
+    background-color: #ffffd0;
+}
+
+label {
+    font-family: 'Lato', Verdana, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.reveal {
+  max-height: 0;
+  transition: max-height 0.15s ease-out;
+  overflow: hidden;
+}
+
+input:checked + label + .reveal {
+  max-height: 500px;
+  transition: max-height 0.25s ease-in;
+}
+
+input + label:after { content: ""; }
+input:checked + label:after { content: ""; }
+
+</style>
+
+
+
+<head>
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-113912658-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-113912658-1');
+</script>
+
+
+  <title>Nathan Krause Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="UCSD.png" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700" rel="stylesheet">
+
+</head>
+
+<body>
+<div class="container">
+
+	<hr /> <br />
+  <div class="row">
+    <div id="profile-img" class="col-prof-pic cropcircle">
+    </div>
+    <div class="col-bio">
+      <p align="center">
+		  <name>Nathan Krause</name> <br />
+          <a href="mailto:nathankrause@verizon.net">nathankrause@verizon.net</a>
+	  </p>
+
+      <p>I am a first-year undergraduate at <a href="http://www.ucsd.edu/">UC San Diego</a> pursuing a Bachelor of Science in <a href = "http://www.ece.ucsd.edu/"> Computer Engineering</a>. 
+      </p>
+
+      <p> I interned at <a href="http://www.beavens.com"> Beavens Systems Inc.</a> for the past two summers working with industrial water control systems. Part-time I work as a freelance consultant for small business or home networks, and live sound reinforcement technician for community events. 
+      </p>
+
+      <p align=center>
+
+		<a href="resume.html">Resume</a> &nbsp;/&nbsp;
+		<a href="https://github.com/N-T-K">GitHub</a> &nbsp;/&nbsp;
+        <a href="https://www.linkedin.com/in/ntKrause">LinkedIn</a>
+
+	  </p>
+    </div>
+
+</div><br /> <hr /><br /><br />
+
+
+
+  <div class="row">
+	  <heading>News</heading> <br /><br />
+	  &bull; &nbsp; <u>January 2018</u>: Created by first public GitHub <a href="https://github.com/N-T-K">repository</a> for my personal and school projects. <br/>
+      &bull; &nbsp;<u>December 2017</u>: Made changes to the <a href="light_show/light_show.html">Christmas MIDI Piano Light Show</a> <br/>
+      &bull; &nbsp;<u>January 2017</u>: Started the <a href="sms_scada/sms_scada.html"> Remote Kill-Switch </a> project.
+      
+  </div>
+
+  <div class="row">
+	  <heading>Experience</heading>
+  </div>
+
+	<div class="row">
+    <div class="col-proj-pic"><img src='BSILogo2.png'></div>
+    <div class="col-proj-desc">
+      <a href="http://www.beavens.com">
+        <papertitle>Beavens Systems Inc.</papertitle>
+      </a><br>
+      <strong>Technician Intern</strong><br>
+      <em>Torrance, CA </em > &bull; Summers 2016-Present<br>
+      <p>Developed time-series forecasting, machine learning models to predict drug shortages, and price changes. Effectively analyzed and visualized datatsets with more than 10 Million drug usage and transaction records. Used dimension-reduction techniques (PCA, SVD, LDA), fourier and log transformations and resampling techniques (bagging, boosting) to identify correlations between variables and extract underlying patterns of the data. Worked with multiple regression and classificatoin models - linear models, ARIMA, boosted trees (xgboost), random forests  and SVMs.</p>
+    </div>
+  </div>
+
+
+  <div class="row">
+    <heading>Projects</heading><br /><br />
+    Personal projects I have been working on...
+  </div>
+
+  <div class="row">
+	<div class="col-proj-pic"><img src='light_show/lightshow.gif'></div>
+	<div class="col-proj-desc">
+	  <a href="https://github.com/arkingupta/Gentrification/">
+		<papertitle>Christmas MIDI Piano Light Show</papertitle>
+	  </a><br>
+	  <strong>December 2017 &bull; Serial Communication / User Interactive / C++<br></strong>
+	  <p>Analysis of the negative effects of Gentrification in San Diego in the 21st Century.
+		Visualized the change in demographics of all neighborhoods in San Diego using heat maps.
+		Identified neighborhoods effected the most by Gentrification and found patterns between multiple socio-economic factors such as Poverty, Population, Uninsurance and Property value.
+		Languages/Tools Used: Python (Pandas, NumPy, Matplotlib, Patsy), Jupyter Notebooks.</p>
+	</div>
+  </div>
+    
+  <!--<div class="row">
+  <heading>Teaching Assistant Positions</heading>
+  </div>
+
+  <div class="row">
+    <div class="col-proj-pic"><img src="UCSD.png" alt="UC San Diego"></div>
+    <div class="col-proj-desc">
+      <p>
+
+        <a href="https://cseweb.ucsd.edu/classes/sp17/cse11-a/index.html">
+        <papertitle>CSE 11 - Object-Oriented Programming</papertitle>
+        </a>
+        <br><em>UC San Diego, Spring 2017</em><br><br>
+
+        <a href="https://cseweb.ucsd.edu/classes/sp17/cse11-a/index.html">
+        <papertitle>CSE 12 - Data Structures</papertitle>
+        </a>
+        <br><em>UC San Diego, Winter 2018</em><br><br>
+
+
+        </p>
+    </div>
+  </div>
+    -->
+  <div class="row">
+  <heading>Selected Coursework</heading>
+    &nbsp; (at UC San Diego)
+
+      <ul>
+        <li>CSE 20 - Discrete Mathematics</li>
+	    	<li>CSE 15L - Software Tools &amp; Techniques</li>
+        <li>CSE 12 - Data Strcutures &amp; OOP Design</li>
+        <li>CSE 11 - Object-Oriented Programming</li>
+      </ul>
+  </div>
+
+  <br /><br /><hr />
+  <div class="row">
+  <p align="right">
+    <font size="2">
+		<center>
+	  © 2018 Nathan Krause. All rights reserved. <br />
+      Website cloned from <a href="http://people.eecs.berkeley.edu/~barron/">here.</a>
+
+  		</center>
+    </font>
+  </p>
+  </div>
+   <hr />
+
+</div>
+</body>
+</html>
