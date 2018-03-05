@@ -1,0 +1,283 @@
+<html>
+    <head>
+        <style>
+* {
+    box-sizing: border-box;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Spacing between rows */
+.row + .row { margin-top: 40px; }
+
+/* For mobile phones: */
+[class*="col-"] {
+    width: 100%;
+}
+
+.col-prof-pic { margin:auto; }
+.col-proj-pic { display:auto; }
+
+.container {
+    width:max-width;
+    padding:15px;
+}
+
+ul {
+    list-style: none;
+    margin-left: 0px;
+    padding-left: 15px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    columns: 1;
+    -webkit-columns: 1;
+    -moz-columns: 1;
+}
+
+@media only screen and (min-width: 500px) {
+    /* For desktop: */
+    .container {
+        max-width:800px;
+        margin:auto;
+    }
+    .col-bio {max-width: 65%;}
+    .col-prof-pic {float:right; margin-left:20px;}
+    .col-proj-pic {max-width: 25%; float:left; display:inline; padding-right: 20px; }
+    .col-proj-desc {max-width: 75%; float:left;}
+}
+
+@media only screen and (min-width: 800px) {
+    /* For desktop: */
+    ul {
+        columns: 2;
+        -webkit-columns: 2;
+        -moz-columns: 2;
+    }
+}
+
+
+a {
+    color: #1772d0;
+    text-decoration:none;
+}
+
+a:focus, a:hover {
+    color: #f09228;
+    text-decoration:none;
+}
+
+body,td,th,tr,p,a {
+    font-family: 'Lato', Verdana, Helvetica, sans-serif;
+    font-size: 14px;
+    line-height:130%;
+}
+
+strong {
+    font-family: 'Lato', Verdana, Helvetica, sans-serif;
+    font-size: 15px;
+	font-weight: 700;
+}
+
+heading {
+    font-family: 'Lato', Verdana, Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+papertitle {
+    font-family: 'Lato', Verdana, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+name {
+    font-family: 'Lato', Verdana, Helvetica, sans-serif;
+    font-size: 40px;
+}
+
+.col-proj-pic img {
+    max-width: 100%;
+}
+
+.cropcircle {
+	border-radius: 100%;
+    background: #eee no-repeat center;
+    background-size: cover;
+}
+
+#profile-img{
+    height: 250px;
+    width: 250px;
+    background-image: url(profile_picture.jpeg);
+}
+
+span.highlight {
+    background-color: #ffffd0;
+}
+
+label {
+    font-family: 'Lato', Verdana, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.reveal {
+  max-height: 0;
+  transition: max-height 0.15s ease-out;
+  overflow: hidden;
+}
+
+input:checked + label + .reveal {
+  max-height: 500px;
+  transition: max-height 0.25s ease-in;
+}
+
+input + label:after { content: ""; }
+input:checked + label:after { content: ""; }
+
+</style>
+
+        <title> MIDI Piano Christmas Light Show</title>
+    </head>
+    <body>
+
+<div class="container"> <!-- outermost container -->
+    <p>
+            <td><a href="../index.html">Home</a></td> | <td><a href="https://github.com/N-T-K"target="_blank">My GitHub</a></td> |
+    </p>    
+<div class="container">
+    <name> MIDI Piano Christmas Light Show </name> <br/>
+    <hr/>
+    <p align="left">
+            Author: Nathan Krause <br>
+            Email:<a href="mailto:nathankrause@verizon.net"target="_blank"> nathankrause@verizon.net</a> <br>
+            Last Updated: 2/23/18 <br>
+            <a href="https://github.com/N-T-K/MidiPianoLights"target="_blank">Project Repository </a>
+    </p>
+    <hr width="50%" align="left">
+</div>
+
+<div class="row">
+    <heading>Overview:</heading>
+    <p>
+        This simple program written for an Arduino with an open source MIDI shield
+      allows the arduino to interpret serial data from the shield into which Key was
+      pressed and the velocity in which the note was played (force applied to key).
+      The midi protocal dictates an on byte and an off byte for the corresponding
+      key that was played. <a href="http://www.indiana.edu/~emusic/etext/MIDI/chapter3_MIDI4.shtml"target="_blank">[Learn More]</a> 
+      about the MIDI instrument communication.        
+    </p>
+</div>
+
+<div class="row">
+    <heading> Origin and Project History:</heading>
+    <p>
+      The project was inspired after from my neighborhood. Each year thousands of
+      cars drive through each night of December to see the lights (yes it really is
+      that crazy). And the displays were great; however, I noticed that kids would
+      constanly try to interact with the display i.e. playing with reindeers and
+      other figurines, but these static displays were not meant to be messed with by
+      hundreds of little kids which wasn't fair to the owner of the house or the
+      kid. Therefore, I decided to get rid of the static display at my house and
+      introduce a dynamic light show which was synced to music inspired by hundreds
+      of YouTube videos of peoples light shows. This was great and brought joy to a
+      lot of kids and adults but it still lacked the user interactive feature. The
+      next year I took the same backbone (relay box used to switch the lights off
+      and on) and introduced the piano aspect. Anyone walking down the street could
+      now play the piano and thus control the lights. It was an immediate success
+      and I will have to post the reactions on YouTube soon (the kids could play
+      better than most of the adults!). This piano feature was introduce in December
+      of 2017 and will most likely receive multiple upgrades, either hardware or
+      software functionality, before next December and hopefully every year
+      thereafter.   
+    </p>
+</div>
+
+<div class="row">
+    <heading> Usage and Behaviour:</heading>
+    <p>
+    The program is currently written to look for a piano (or possibly and MIDI 
+device) that is trasnmitting on channel 0. 
+  
+There are two modes:
+<ol>
+   <li>Default</li>
+   <li>User</li>
+</ol>
+  <p>
+  <b>Default</b>is the base state in which all relays are on except for two that
+  control lights illuminating the piano keys and the piano player. 
+  In <b>user</b> mode the lights are initially all shut off except for the two relays
+  controlling lights on the piano keys and one spotlight overheard illuminating 
+  the current player. 
+  </p>
+  <p>
+  Upon pressing a button, wired to digital pin on the arduino, the mode is
+  switched from "Default" to "User". After initial deployment it
+  was discovered that most people did not understand the button system so the 
+  program was modified to accept any piano key press as a trigger to switch
+  modes. The program doesn't switch back to "Default" until a key has not been
+  pressed for 5 seconds implying the player has walked away in which the lights
+  should all come back on. 
+  </p>
+</div>
+
+<div class="row">
+    <heading>Key Mapping:</heading>
+    <p>
+        The keyboard has 66 keys (including sharps). Instead of having 66 different
+        relays every 7 keys are interpreted the same and the sharps are mapped to
+        trigger the same key as their flat note (I apologize if this is musically
+        incorrect I'm a Computer Engineering Major not a Music ;) ). For example:
+        pressing key 1, which is a C, triggers the same relay as any other C on the
+        piano. C# also triggers the same relay as C flat. The reason for this is to
+        allow each key a greater effect on the display. What I mean by that is rather
+        than having one string linked to one key, a group of strings for a particular
+        portion of the display are controlled by the same relay thereby giving a much
+        large effect upon key press. This was derived after real world testing with
+        the display and actual random players.    
+    </p>
+</div>
+
+<div class="row">
+    <heading>Future Improvements:</heading>
+</div>
+    <ol>
+        <li>Pattern recognition of certain songs and auto-completing the rest or some other response or rewared system.</li>
+        <li>PWM Dimming. Unfortuneately the current setup uses Zero-Cross Solid State
+     Relays which makes it possible to dim. Switching the Zero-Cross for Random
+     Cross or any other MOSFET would be a viable solution.</li>
+        <li>Projection mapping</li>
+        <br> <i> Suggestions are welcome...</i>
+    </ol>
+    
+<div class="row">
+    <heading> Parts Used:</heading> 
+    <ul>
+        <li>- Arduino Mega 2560</li>
+        <li>- (3) eight channel solid state relay board</li>
+        <li>- MIDI piano 66 key</li>
+        <li>- <a href="https://www.olimex.com/Products/Duino/Shields/SHIELD-MIDI/open-source-hardware"target="_blank">MIDI Shield by OLIMEX</a> </li>
+        <li>- Momentary Push Button</li>
+        <li>- Outlets (3-prong child proof)</li>
+    </ul>
+</div>
+    <br /><br /><hr />
+  <div class="row">
+  <p align="right">
+    <font size="2">
+		<center>
+	  © 2018 Nathan Krause. All rights reserved. <br />
+  		</center>
+    </font>
+  </p>
+  </div>
+   <hr />
+</div>
+    </body>
+</html>
