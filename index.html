@@ -20,7 +20,7 @@
 }
 
 .col-prof-pic { margin:auto; }
-.col-proj-pic { display:none; }
+.col-proj-pic { display:auto; }
 
 .container {
     width:max-width;
@@ -159,7 +159,7 @@ input:checked + label:after { content: ""; }
 
   <title>Nathan Krause Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="shortcut icon" href="UCSD.png" type="image/x-icon">
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
   <link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700" rel="stylesheet">
 
 </head>
@@ -174,20 +174,20 @@ input:checked + label:after { content: ""; }
     <div class="col-bio">
       <p align="center">
 		  <name>Nathan Krause</name> <br />
-          <a href="mailto:nathankrause@verizon.net">nathankrause@verizon.net</a>
 	  </p>
 
-      <p>I am a first-year undergraduate at <a href="http://www.ucsd.edu/">UC San Diego</a> pursuing a Bachelor of Science in <a href = "http://www.ece.ucsd.edu/"> Computer Engineering</a>. 
+      <p>I am a first-year undergraduate at <a href="http://www.ucsd.edu/"target="_blank">UC San Diego</a> pursuing a Bachelor of Science in <a href = "http://www.ece.ucsd.edu/"target="_blank"> Computer Engineering</a>. 
       </p>
 
-      <p> I interned at <a href="http://www.beavens.com"> Beavens Systems Inc.</a> for the past two summers working with industrial water control systems. Part-time I work as a freelance consultant for small business or home networks, and live sound reinforcement technician for community events. 
+      <p> I interned at <a href="http://www.beavens.com"target="_blank"> Beavens Systems Inc.</a> for the past two summers working with industrial water control systems. Part-time I work as a freelance consultant for small business or home networks, and live sound reinforcement technician for community events. 
       </p>
 
       <p align=center>
 
-		<a href="resume.html">Resume</a> &nbsp;/&nbsp;
-		<a href="https://github.com/N-T-K">GitHub</a> &nbsp;/&nbsp;
-        <a href="https://www.linkedin.com/in/ntKrause">LinkedIn</a>
+		<a href="NathanKrauseResume.pdf"target="_blank">Resume</a> &nbsp;/&nbsp;
+		<a href="https://github.com/N-T-K"target="_blank">GitHub</a> &nbsp;/&nbsp;
+        <a href="https://www.linkedin.com/in/ntKrause"target="_blank">LinkedIn</a> &nbsp;/&nbsp;
+        <a href="mailto:nathankrause@verizon.net"target="_blank">Email</a>
 
 	  </p>
     </div>
@@ -198,7 +198,7 @@ input:checked + label:after { content: ""; }
 
   <div class="row">
 	  <heading>News</heading> <br /><br />
-	  &bull; &nbsp; <u>January 2018</u>: Created my first public GitHub <a href="https://github.com/N-T-K">repository</a> for my personal and school projects. <br/>
+	  &bull; &nbsp; <u>January 2018</u>: Created my first public GitHub <a href="https://github.com/N-T-K"target="_blank">repository</a> for my personal and school projects. <br/>
       &bull; &nbsp;<u>December 2017</u>: Made changes to the <a href="light_show/light_show.html">Christmas MIDI Piano Light Show</a> <br/>
       &bull; &nbsp;<u>January 2017</u>: Started the <a href="sms_scada/sms_scada.html"> Remote Kill-Switch </a> project.
       
@@ -211,12 +211,12 @@ input:checked + label:after { content: ""; }
 	<div class="row">
     <div class="col-proj-pic"><img src='BSILogo2.png'></div>
     <div class="col-proj-desc">
-      <a href="http://www.beavens.com">
+      <a href="http://www.beavens.com"target="_blank">
         <papertitle>Beavens Systems Inc.</papertitle>
       </a><br>
       <strong>Technician Intern</strong><br>
       <em>Torrance, CA </em > &bull; Summers 2016-Present<br>
-      <p>Developed time-series forecasting, machine learning models to predict drug shortages, and price changes. Effectively analyzed and visualized datatsets with more than 10 Million drug usage and transaction records. Used dimension-reduction techniques (PCA, SVD, LDA), fourier and log transformations and resampling techniques (bagging, boosting) to identify correlations between variables and extract underlying patterns of the data. Worked with multiple regression and classificatoin models - linear models, ARIMA, boosted trees (xgboost), random forests  and SVMs.</p>
+      <p>Performed basic network administration and server maintenance in addition to human machine interface (HMI) programming for industrial water control systems and testing for PLC with low voltage wiring and cable manufacturing. I was also required to setup and test wired and radio serial networks between devices for remote data acquisition integrating programmable logic controllers (PLCs). In addition I worked with other industrial automation languages (Ladder Logic, Function Block, etc.) to test setups for customers prior to installation on the job site. </p>
     </div>
   </div>
 
@@ -227,19 +227,50 @@ input:checked + label:after { content: ""; }
   </div>
 
   <div class="row">
+	<div class="col-proj-pic"><img src='digital_dash/RASP_03_01.png'></div>
+	<div class="col-proj-desc">
+	  <a href="https://github.com/N-T-K/digital_dash">
+		<papertitle>Digital Dash for Vehicles (coming soon...)</papertitle>
+	  </a><br>
+	  <strong>June 2018 &bull; Serial Communication / User Interactive / C / Java / Sensor Array<br></strong>
+	  <p>I am currently working on a "Digital Dash" using a touch screen and a Raspberry Pi to interface a vehicle with the driver allowing for more specific data presentation/customization and logging. 
+      </p>
+	</div>
+  </div>    
+    
+  <div class="row">
 	<div class="col-proj-pic"><img src='light_show/lightshow.gif'></div>
 	<div class="col-proj-desc">
-	  <a href="https://github.com/arkingupta/Gentrification/">
+	  <a href="light_show/light_show.html">
 		<papertitle>Christmas MIDI Piano Light Show</papertitle>
 	  </a><br>
 	  <strong>December 2017 &bull; Serial Communication / User Interactive / C++<br></strong>
-	  <p>Designed and built a light control system that allowed for programmed
-    sequences or control by any computer device. In its current state the ligth
-    show is communicates with a MIDI piano to turn the strings of lights off and
-    on based on key presses by a user.</p>
+	  <p>In essence it's a Christmas light show controlled by a piano or computer. Specifically, I designed and constructed a fully functional and programmable light control system consisting of up to 32 independently controlled channels. The unit could be pre-sequenced through an open source platform called <a href="http://www.vixenlights.com/"target="_blank">Vixen</a> or controlled instantaneously via a MIDI piano allowing for an user-interactive experience (its current state and most successful state). 
+      </p>
 	</div>
   </div>
     
+  <div class="row">
+    <div class="col-proj-pic"><img src='sms_scada/SMS-SCADA_render.png'></div>
+    <div class="col-proj-desc">
+        <a href="sms_scada/sms_scada.html">
+          <papertitle>SMS SCADA</papertitle>
+        </a><br/>
+        <strong>January 2017 &bull; Cellular Communication / Product Design / Arduino<br/></strong>
+        <p>Remotely accessible device that could gather information about location and sensor data, but also allow the user to control real world outputs connected to the device such as a relay to shut off or disable a car (remote kill-switch). The device could be expanded to industrial applications in remote locations lacking infrastructure.</p>
+    </div>
+  </div>
+    
+ <div class="row">
+    <div class="col-proj-pic"><img src='bronco/BroncoHoverCraft.JPG'></div>
+    <div class="col-proj-desc">
+        <a href="bronco/bronco.html">
+          <papertitle>1988 For Bronco Resto-Mod</papertitle>
+        </a><br/>
+        <strong>October 2016 &bull; Mechanical Repair / Diagram Interpretation / Electrical<br/></strong>
+        <p>This is a purely for fun project that started with the purchase of a 1988 Ford Bronco that had a partially complete engine that and would not run. Since then the truck has undergone an engine swap and a complete suspension rebuild/upgrade greatly increasing wheel travel (Long-Travel Kit). The bronco also has the <a href="sms_scada/sms_scada.html">SMS SCADA Project</a> installed as an anti-theft device where the truck can be remotely tracked and shutdown with a cell phone. In the future it will also implement remote start with text. </p>
+    </div>
+  </div>
   <!--<div class="row">
   <heading>Teaching Assistant Positions</heading>
   </div>
@@ -248,18 +279,11 @@ input:checked + label:after { content: ""; }
     <div class="col-proj-pic"><img src="UCSD.png" alt="UC San Diego"></div>
     <div class="col-proj-desc">
       <p>
-
+        HOPEFULLY I GET THIS BUT IT IS NOT LIKELY 
         <a href="https://cseweb.ucsd.edu/classes/sp17/cse11-a/index.html">
         <papertitle>CSE 11 - Object-Oriented Programming</papertitle>
         </a>
-        <br><em>UC San Diego, Spring 2017</em><br><br>
-
-        <a href="https://cseweb.ucsd.edu/classes/sp17/cse11-a/index.html">
-        <papertitle>CSE 12 - Data Structures</papertitle>
-        </a>
-        <br><em>UC San Diego, Winter 2018</em><br><br>
-
-
+        <br><em>UC San Diego, Spring 2018</em><br><br>
         </p>
     </div>
   </div>
@@ -269,10 +293,12 @@ input:checked + label:after { content: ""; }
     &nbsp; (at UC San Diego)
 
       <ul>
+        <li>CSE 30 - Computer Organization &amp; Systems Programming</li>
         <li>CSE 20 - Discrete Mathematics</li>
-	    	<li>CSE 15L - Software Tools &amp; Techniques</li>
+	    <li>CSE 15L - Software Tools &amp; Techniques</li>
         <li>CSE 12 - Data Strcutures &amp; OOP Design</li>
         <li>CSE 11 - Object-Oriented Programming</li>
+        
       </ul>
   </div>
 
@@ -282,7 +308,7 @@ input:checked + label:after { content: ""; }
     <font size="2">
 		<center>
 	  © 2018 Nathan Krause. All rights reserved. <br />
-      Website cloned from <a href="http://people.eecs.berkeley.edu/~barron/">here.</a>
+      Website derived from <a href="http://people.eecs.berkeley.edu/~barron/"target="_blank">here.</a>
 
   		</center>
     </font>
